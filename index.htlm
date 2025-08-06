@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tài Xỉu  - Hot789 Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="user-info">
+        <img src="https://i.imgur.com/FQZ7N6v.png" alt="avatar" class="avatar">
+        <h2>User Demo</h2>
+        <p>Số dư: <span id="balance">10000</span>₫</p>
+      </div>
+      <nav>
+        <button onclick="showSection('taixiu')">🎲 Tài Xỉu</button>
+        <button onclick="showSection('quayhu')">🎰 Quay Hũ</button>
+        <button onclick="resetGame()">🔄 Reset</button>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="taixiu" class="game-section active">
+        <h1>🎲 Game Tài Xỉu</h1>
+        <div class="dice-container" id="dice"></div>
+        <div class="controls">
+          <input type="number" id="bet-amount" placeholder="Nhập tiền cược" />
+          <button onclick="play('tai')">Cược Tài</button>
+          <button onclick="play('xiu')">Cược Xỉu</button>
+        </div>
+        <div id="result"></div>
+        <div>
+          <h3>Lịch sử:</h3>
+          <ul id="history"></ul>
+        </div>
+      </section>
+
+      <section id="quayhu" class="game-section">
+        <h1>🎰 Game Quay Hũ</h1>
+        <div class="slot">
+          <span id="slot1">🍒</span>
+          <span id="slot2">🍋</span>
+          <span id="slot3">🍉</span>
+        </div>
+        <button onclick="quayHu()">Quay</button>
+        <div id="quay-result"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
